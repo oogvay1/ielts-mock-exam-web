@@ -33,6 +33,13 @@ server.get("/question", async (req, res) => {
     }
 });
 
+server.post('/user', async (req, res) => {
+
+    try {
+        const file = await fs.
+    }
+})
+
 server.post("/check", (req, res) => {
 
     const result = shallowEqual(answers, req.body, Object.keys(req.body).length, 0);
