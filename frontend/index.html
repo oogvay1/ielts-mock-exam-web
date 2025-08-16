@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/style.css">
+  <title>Vite App</title>
+</head>
+
+<body>
+
+  <!-- <main class="main">
+
+    <aside>
+      <div class="aside-inner">
+
+        <div class="aside-logo">
+          <h1>IELTS test</h1>
+          <i class="ri-side-bar-line"></i>
+        </div>
+
+        <ul class="aside-ul">
+          <li class="aside-li">
+            <i class="ri-home-5-line"></i>
+            <p>Dashboard</p>
+          </li>
+
+          <li class="aside-li">
+            <i class="ri-group-line"></i>
+            <p>Users</p>
+          </li>
+
+          <li class="aside-li">
+            <i class="ri-pie-chart-line"></i>
+            <p>Analytics</p>
+          </li>
+        </ul>
+
+        <div class="pro-version">
+          <h2>Upgrade to Pro</h2>
+          <p>Get access to additional features and contact</p>
+          <button>Upgrade</button>
+        </div>
+
+        <div class="control-section">
+          <li class="aside-li">
+            <i class="ri-settings-3-line"></i>
+            <p>Settings</p>
+          </li>
+
+          <li class="aside-li">
+            <i class="ri-customer-service-line"></i>
+            <p>Help Center</p>
+          </li>
+
+          <li class="aside-li">
+            <i class="ri-logout-box-line"></i>
+            <p>Log out</p>
+          </li>
+        </div>
+
+      </div>
+    </aside>
+
+    <section class="dashboard">
+
+      <header class="header">
+        <div class="header-inner">
+          <div class="header-name">
+            <h1>Dashboard</h1>
+          </div>
+
+          <div class="header-nav">
+            <div class="header-search">
+              <i class="ri-search-2-line"></i>
+              <input type="text" placeholder="Search...">
+            </div>
+
+            <div class="header-user">
+              <div class="header-notification">
+                <i class="ri-notification-3-line"></i>
+              </div>
+
+              <div class="header-user-pic">
+                <img class="header-user-pic-img" src="./public/img/image.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="section-filter">
+        <div class="filer-inner">
+
+          <div class="filter-day">
+            <h3>Day</h3>
+          </div>
+          
+          <div class="filter-week">
+            <h3>Week</h3>
+          </div>
+
+          <div class="filter-month">
+            <h3>Month</h3>
+          </div>
+
+          <div class="filter-year">
+            <h3>Year</h3>
+          </div>
+
+        </div>
+      </section>
+
+    </section>
+
+  </main> -->
+
+  <div id="root">
+    <div class="modal-inner">
+
+      <header class="header">
+
+        <div class="header-logo">
+          <img src="./public/img/logo.png" alt="">
+        </div>
+
+        <div class="login">
+          <h2>Already have an accout ?</h2>
+          <button id="login-btn" class="login-btn">Login</button>
+        </div>
+
+      </header>
+
+      <main>
+        <div class="main-inner">
+          <div class="img-container">
+            <img src="./public/img/undraw_questions_g2px.svg" alt="">
+          </div>
+
+          <div class="login-container">
+            <div class="login-title">
+              <h1>Welcome to IELTS mock</h1>
+              <p>Register your account</p>
+            </div>
+
+            <div class="inputs-container">
+
+              <div class="login-inputs" id="login-inputs">
+                <label>
+
+                  <input class="input" type="text" placeholder=" " required>
+                  <p class="label-p">Enter Name</p>
+
+                </label>
+
+                <label id="email">
+
+                  <input class="input" type="email" placeholder=" " required>
+                  <p class="label-p">Enter Email</p>
+
+                </label>
+
+                <label>
+
+                  <input class="input" type="password" placeholder=" " required>
+                  <p class="label-p">Enter Password</p>
+
+                </label>
+
+              </div>
+
+              <button class="sign-up-btn" id="sign-up-btn">Sign Up</button>
+            </div>
+
+            <div class="create-acc">
+              <p>Create account with</p>
+
+              <div class="create-list">
+                <i class="ri-facebook-line"></i>
+                <i class="ri-google-line"></i>
+                <i class="ri-linkedin-line"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+</body>
+
+<script type="module" src="/src/main.js"></script>
+
+</html>
