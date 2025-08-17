@@ -1,8 +1,27 @@
 [
-    {
-        "id": 1,
-        "name": "Azimbek",
-        "lastname": "Alibekov",
-        "password": "12121212"
-    }
+	{
+		"name": "",
+		"lastname": "",
+		"password": ""
+	},
+	{
+		"name": "",
+		"lastname": "",
+		"password": ""
+	},
+	{
+		"name": "",
+		"lastname": "",
+		"password": ""
+	},
+	{
+		"name": "Alibekov",
+		"lastname": "Azimbek",
+		"password": "topchik126"
+	},
+	{
+		"name": "dkfgjlk",
+		"lastname": "jslkjdgf",
+		"password": "jslkdjflksjdf"
+	}
 ]

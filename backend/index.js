@@ -36,8 +36,16 @@ server.get("/question", async (req, res) => {
 server.post('/user', async (req, res) => {
 
     try {
-        const file = await fs.
+        const file = JSON.parse(await fs.readFile('./data/users.json', "utf-8"));
+        file.push(req.body);
+        
+
+        await fs.writeFile('./data/users.json', JSON.stringify(file, null, "\t"));
+        res.send(file);
+    } catch (error) {
+        console.error(error);
     }
+
 })
 
 server.post("/check", (req, res) => {
