@@ -27,7 +27,7 @@ export default async function sendData(data, id) {
             counter++;
         }
 
-        const res = await fetch('http://localhost:3000/check', {
+        const res = await fetch("http://localhost:3000/check", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

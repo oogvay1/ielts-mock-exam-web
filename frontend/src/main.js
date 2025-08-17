@@ -4,7 +4,7 @@ const login_btn = document.getElementById('login-btn');
 
 login_btn.onclick = () => {
 
-    const email = document.getElementById('email')
+    const email = document.getElementById('email');
     email.classList.toggle('active');
 
     document.getElementById('login-inputs').classList.toggle('active');
@@ -18,28 +18,57 @@ sign.onclick = async () => {
     try {
         const user = {
             name: "",
-            lastname: "",
+            email: "",
             password: ""
         }
 
         inputs.forEach(el => {
             if (el.name === "name") user.name = el.value;
-            if (el.name === "email") user.lastname = el.value;
             if (el.name === "password") user.password = el.value;
+            if (el.name === "email") user.email = el.value;
         });
 
-        const res = await fetch("http://localhost:3000/user", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json; charset=UTF-8"
-            },
-            body: JSON.stringify(user);
-        });
+        let res;
+
+        if (document.getElementById('sign-up-btn').textContent === 'Sign In') {
+            res = await fetch("http://localhost:3000/user", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json; charset=UTF-8"
+                },
+                body: JSON.stringify({ ...user, email: "signin" })
+            });
+
+            clearInput()
+        } else {
+            res = await fetch("http://localhost:3000/user", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json; charset=UTF-8"
+                },
+                body: JSON.stringify(user)
+            });
+
+            clearInput()
+        }
 
         const data = await res.json();
-        console.log("User created:", data);
+
+        if (data == true) {
+            console.log('yes')
+            fetchData();
+            document.getElementById('modal-container').innerHTML = ''
+        } else {
+            console.log('user not found');
+        }
+        console.log(data);
 
     } catch (error) {
         console.error(error);
     }
 };
+
+function clearInput() {
+
+    document.querySelectorAll('.input').forEach(el => el.value = '');
+}

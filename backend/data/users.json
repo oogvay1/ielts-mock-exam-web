@@ -1,27 +1,8 @@
 [
 	{
-		"name": "",
-		"lastname": "",
-		"password": ""
-	},
-	{
-		"name": "",
-		"lastname": "",
-		"password": ""
-	},
-	{
-		"name": "",
-		"lastname": "",
-		"password": ""
-	},
-	{
-		"name": "Alibekov",
-		"lastname": "Azimbek",
-		"password": "topchik126"
-	},
-	{
-		"name": "dkfgjlk",
-		"lastname": "jslkjdgf",
-		"password": "jslkdjflksjdf"
+		"id": 7,
+		"name": "Azimbek",
+		"email": "signin",
+		"password": "still_masteroogvay"
 	}
 ]

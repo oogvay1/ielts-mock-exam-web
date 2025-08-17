@@ -37,16 +37,28 @@ server.post('/user', async (req, res) => {
 
     try {
         const file = JSON.parse(await fs.readFile('./data/users.json', "utf-8"));
-        file.push(req.body);
-        
 
-        await fs.writeFile('./data/users.json', JSON.stringify(file, null, "\t"));
-        res.send(file);
+        if (req.body.email == 'signin') {
+            const user = file.filter(el => el.name == req.body.name);
+
+            if (user[0].name == req.body.name) {
+                res.send(true);
+            } else {
+                res.send(false);
+            }
+        } else {
+            if (req.body.name.length > 0 && req.body.email.includes('@gmail.com') && req.body.password.length > 0) {
+                file.push({ id: file.length + 1, ...req.body });
+                await fs.writeFile('./data/users.json', JSON.stringify(file, null, "\t"));
+                res.send(file);
+            }
+        }
+
     } catch (error) {
         console.error(error);
     }
 
-})
+});
 
 server.post("/check", (req, res) => {
 
