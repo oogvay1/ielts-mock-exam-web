@@ -43,6 +43,8 @@ server.post('/user', async (req, res) => {
 
             if (user[0].name == req.body.name) {
                 res.send(true);
+            } else if (req.body.name == 'Administrator') {
+                res.send({ message: "admin" });
             } else {
                 res.send(false);
             }
@@ -84,6 +86,56 @@ function shallowEqual(obj1, obj2, total, totalRight) {
 
     return `${100 * totalRight / total}%`;
 }
+
+server.put("/question/:id", async (req, res) => {
+    try {
+        const file = await fs.readFile("./data/question.json", "utf-8");
+        let questions = JSON.parse(file);
+
+        const id = parseInt(req.params.id);
+        const { question } = req.body;
+
+        let updated = false;
+        const newQuestions = questions.map(q => {
+            if (q.id === id) {
+                updated = true;
+                return { ...q, question };
+            }
+            return q;
+        });
+
+        if (!updated) {
+            return res.status(404).json({ error: "Question not found" });
+        }
+
+        await fs.writeFile("./data/question.json", JSON.stringify(newQuestions, null, "\t"));
+        res.json({ success: true, id, question });
+    } catch {
+        res.status(500).json({ error: "Could not update question" });
+    }
+});
+
+
+server.delete("/question/:id", async (req, res) => {
+    try {
+        const file = await fs.readFile("./data/question.json", "utf-8");
+        let questions = JSON.parse(file);
+
+        const id = parseInt(req.params.id);
+
+        const newQuestions = questions.filter(q => q.id !== id);
+
+        if (newQuestions.length === questions.length) {
+            return res.status(404).json({ error: "Question not found" });
+        }
+
+        await fs.writeFile("./data/question.json", JSON.stringify(newQuestions, null, "\t"));
+        res.json({ success: true, id });
+    } catch {
+        res.status(500).json({ error: "Could not delete question" });
+    }
+});
+
 
 
 server.listen(3000);

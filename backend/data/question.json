@@ -1,102 +1,62 @@
 [
-    {
-        "id": 1,
-        "question": "What is the synonym of 'rapid'?",
-        "options": [
-            "Slow",
-            "Fast",
-            "Heavy",
-            "Late"
-        ]
-    },
-    {
-        "id": 2,
-        "question": "Choose the correct form: 'He ____ to the gym every day.'",
-        "options": [
-            "go",
-            "goes",
-            "going",
-            "gone"
-        ]
-    },
-    {
-        "id": 3,
-        "question": "Which word means 'to improve in quality'?",
-        "options": [
-            "Deteriorate",
-            "Enhance",
-            "Weaken",
-            "Reduce"
-        ]
-    },
-    {
-        "id": 4,
-        "question": "Select the correct sentence:",
-        "options": [
-            "She don't like coffee.",
-            "She doesn’t likes coffee.",
-            "She doesn't like coffee.",
-            "She not like coffee."
-        ]
-    },
-    {
-        "id": 5,
-        "question": "Which of the following is a noun?",
-        "options": [
-            "Beautiful",
-            "Quickly",
-            "Happiness",
-            "Run"
-        ]
-    },
-    {
-        "id": 6,
-        "question": "Find the antonym of 'scarce':",
-        "options": [
-            "Plentiful",
-            "Limited",
-            "Rare",
-            "Few"
-        ]
-    },
-    {
-        "id": 7,
-        "question": "Which is the correct spelling?",
-        "options": [
-            "Definately",
-            "Definitely",
-            "Definatly",
-            "Definetly"
-        ]
-    },
-    {
-        "id": 8,
-        "question": "Which tense is used in the sentence: 'I have eaten breakfast'?",
-        "options": [
-            "Present Perfect",
-            "Past Simple",
-            "Past Perfect",
-            "Present Continuous"
-        ]
-    },
-    {
-        "id": 9,
-        "question": "Choose the correct preposition: 'He is interested ___ music.'",
-        "options": [
-            "in",
-            "on",
-            "at",
-            "with"
-        ]
-    },
-    {
-        "id": 10,
-        "question": "Which word is closest in meaning to 'generous'?",
-        "options": [
-            "Mean",
-            "Kind",
-            "Selfish",
-            "Rude"
-        ]
-    }
+	{
+		"id": 2,
+		"question": "Choose the correct form: 'He ____ to the gym every day.'",
+		"options": [
+			"go",
+			"goes",
+			"going",
+			"gone"
+		]
+	},
+	{
+		"id": 5,
+		"question": "salom",
+		"options": [
+			"Beautiful",
+			"Quickly",
+			"Happiness",
+			"Run"
+		]
+	},
+	{
+		"id": 7,
+		"question": "Which is the correct spelling?",
+		"options": [
+			"Definately",
+			"Definitely",
+			"Definatly",
+			"Definetly"
+		]
+	},
+	{
+		"id": 8,
+		"question": "Which tense is used in the sentence: 'I have eaten breakfast'?",
+		"options": [
+			"Present Perfect",
+			"Past Simple",
+			"Past Perfect",
+			"Present Continuous"
+		]
+	},
+	{
+		"id": 9,
+		"question": "Choose the correct preposition: 'He is interested ___ music.'",
+		"options": [
+			"in",
+			"on",
+			"at",
+			"with"
+		]
+	},
+	{
+		"id": 10,
+		"question": "Which word is closest in meaning to 'generous'?",
+		"options": [
+			"Mean",
+			"Kind",
+			"Selfish",
+			"Rude"
+		]
+	}
 ]

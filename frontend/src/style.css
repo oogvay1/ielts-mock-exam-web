@@ -12,6 +12,7 @@
 
 body {
     background-color: #f9f9f9;
+    overflow-x: hidden;
 }
 
 .aside-inner {
@@ -211,7 +212,7 @@ body {
 
 .header {
     height: 100px;
-    width: 100vw;
+    width: 87vw;
     display: flex;
     padding: 0 40px;
     justify-content: space-between;
@@ -236,7 +237,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 20px;  
 }
 
 .login h2 {
@@ -448,4 +449,47 @@ body {
     cursor: pointer;
     border: 1px solid gray;
     background-color: #ffff;
+}
+
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.questionContainer {
+    width: 85vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.questionContainer div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.edit-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    font-size: 24px;
+    color: white;
+    border-radius: 10px;
+    background-color: #282828;
+}
+
+.delete-btn {
+    width: 120px;
+    height: 40px;
+    border: none;
+    color: white;
+    font-size: 22px;
+    border-radius: 12px;
+    background-color: #ee0b0b;
 }
