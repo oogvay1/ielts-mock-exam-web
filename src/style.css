@@ -113,8 +113,7 @@ body {
 }
 
 .header-inner {
-    width: 100%;
-    margin: 0 auto;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     height: 60px;
@@ -212,7 +211,7 @@ body {
 
 .header {
     height: 100px;
-    width: 87vw;
+    width: 100vw;
     display: flex;
     padding: 0 40px;
     justify-content: space-between;
